@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Product;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/products', [ProductController::class, 'index']);
+
+Route::get('/favorites', [ProductController::class, 'favorites']);
+
+Route::put('/products/{product}', [ProductController::class, 'update']);
+
+
