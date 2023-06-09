@@ -14,20 +14,32 @@
 </head>
 
 <body>
-    <div>
-        <h1>קופה</h1>
 
-        <nav>
-            <ul>
-                <li><a href="/favorites">מועדפים</a></li>
-                <li><a href="/products">מוצרים</a></li>
-            </ul>
-        </nav>
-        <div>
-            {{ $slot }}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <h1 class="display-6 text-end">סל מוצרים</h1>
+                <div>
+
+                </div>
+            </div>
+            <div class="col-9">
+                <h1 class="display-6 text-end">קופה</h1>
+                <nav>
+                    <ul class="nav nav-tabs justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/favorites">מועדפים</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/products">מוצרים</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div>
+                    {{ $slot }}
+                </div>
+            </div>
         </div>
-    </div>
-
 </body>
 
 </html>
