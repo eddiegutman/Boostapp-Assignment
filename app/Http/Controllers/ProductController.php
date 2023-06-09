@@ -9,15 +9,15 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view('products', [
+        return view('index', [
             'products' => Product::all()
         ]);
     }
 
     public function favorites()
     {
-        return view('favorites', [
-            'favorites' => Product::favorites()->get()
+        return view('index', [
+            'products' => Product::favorites()->get()
         ]);
     }
 
