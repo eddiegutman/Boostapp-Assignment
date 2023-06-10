@@ -9,17 +9,16 @@
             <form action="/cart/{{ $product->id }}" method="POST"
                 enctype="multipart/form-data">
                 @csrf
-                <input type="submit" value="הוסף לסל">
+                <input type="image" src="icons/cart-plus.svg" alt="Submit" class="btn btn-primary px-5">
             </form>
         </span>
         <span>
-            <form id="favorite-form-{{ $product->id }}" action="/products/{{ $product->id }}" method="POST"
+            <form action="/products/{{ $product->id }}" method="POST"
                 enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
-                <label for="fav-{{ $product->id }}">favorite</label>
-                <input type="checkbox" name="favorite" id="fav-{{ $product->id }}" @checked($product->favorite)
-                    onchange="document.getElementById('favorite-form-{{ $product->id }}').submit()">
+                <input type="hidden" name="favorite" value={{ $product->favorite ? 'false' : 'true'}} />
+                <input type="image" src="icons/star{{ $product->favorite ? '-fill' : ''}}.svg" alt="Submit">
             </form>
         </span>
     </div>

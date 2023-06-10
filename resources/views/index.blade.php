@@ -1,7 +1,7 @@
 <x-layout>
     <div class="container-fluid d-flex h-100">
         <div class="row d-flex flex-fill">
-            <div class="col-3 d-flex flex-fill flex-column" style="background-color: red">
+            <div class="col-3 d-flex flex-fill flex-column">
                 <h1 class="display-6 text-end">סל מוצרים</h1>
                 <x-cart :cart="$cart" />
             </div>

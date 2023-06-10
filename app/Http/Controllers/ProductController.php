@@ -23,7 +23,7 @@ class ProductController extends Controller {
 
     public function update(Request $request, Product $product) {
         $args = [
-            'favorite' => $request->input('favorite') === "on" ? true : false
+            'favorite' => $request->input('favorite') === "true" ? true : false
         ];
         $product->update($args);
         return back();

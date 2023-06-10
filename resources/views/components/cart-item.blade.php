@@ -25,7 +25,7 @@
                 <form action="/cart/{{ $item->id }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('DELETE')
-                    <input type="submit" value="מחק">
+                    <input type="image" src="icons/trash.svg" alt="Submit">
                 </form>
             </span>
         </div>
