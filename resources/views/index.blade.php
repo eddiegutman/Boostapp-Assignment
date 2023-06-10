@@ -3,7 +3,7 @@
         <div class="row d-flex flex-fill">
             <div class="col-3 d-flex flex-fill flex-column">
                 <h1 class="display-6 text-end">סל מוצרים</h1>
-                <x-cart :cart="$cart" />
+                <x-cart.cart :cart="$cart" />
             </div>
             <div class="col-9">
                 <h1 class="display-6 text-end">קופה</h1>
@@ -18,7 +18,7 @@
                         </li>
                     </ul>
                 </nav>
-                <x-products :products="$products" />
+                <x-products.products :products="$products" />
             </div>
         </div>
 
