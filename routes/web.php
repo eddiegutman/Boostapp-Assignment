@@ -1,8 +1,9 @@
 <?php
 
-use App\Models\Product;
-use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
+use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return Redirect::to('/products');
+});
+
 Route::get('/products', [ProductController::class, 'index']);
 
 Route::get('/favorites', [ProductController::class, 'favorites']);
 
 Route::put('/products/{product}', [ProductController::class, 'update']);
 
+Route::post('/cart/{product}', [CartController::class, 'store']);
 
+Route::delete('/cart/{cart}', [CartController::class, 'destroy']);
