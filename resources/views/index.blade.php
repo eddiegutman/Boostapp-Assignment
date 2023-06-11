@@ -7,7 +7,6 @@
             </div>
             <div class="col-9">
                 <h1 class="display-6 text-end">קופה</h1>
-                <i class="bi bi-trash"></i>
                 <nav>
                     <ul class="nav nav-tabs justify-content-end">
                         <li class="nav-item">

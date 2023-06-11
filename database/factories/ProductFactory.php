@@ -19,7 +19,7 @@ class ProductFactory extends Factory
         return [
             'name' => $this->faker->firstName(),
             'price' => $this->faker->randomElement([200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 800]),
-            'discount' => $this->faker->randomElement([10, 15, 20, 25, 30]),
+            'discount' => $this->faker->randomElement([0, 10, 15, 20, 25, 30]),
             'favorite' => $this->faker->boolean()
         ];
     }
