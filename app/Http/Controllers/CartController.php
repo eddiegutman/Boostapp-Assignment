@@ -8,10 +8,19 @@ use Illuminate\Http\Request;
 
 class CartController extends Controller {
     public function store(Product $product) {
-        $args = [
-            'product_id' => $product->id
-        ];
-        Cart::create($args);
+        $item = Cart::where('product_id', $product->id)->first();
+        if (!$item) {
+            $args = [
+                'product_id' => $product->id,
+                'quantity' => 1
+            ];
+            Cart::create($args);
+        } else {
+            $args = [
+                'quantity' => $item->quantity + 1
+            ];
+            $item->update($args);
+        }
         return back();
     }
 
