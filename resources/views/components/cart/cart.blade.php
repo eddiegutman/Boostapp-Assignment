@@ -10,7 +10,7 @@
     <div class="p-2 d-flex flex-column overflow-y-auto" style="height: 39rem">
         @foreach ($cart as $item)
             <div class="p-2">
-                <x-cart.cart-item :item="$item" />
+                <x-cart-item.cart-item :item="$item" />
             </div>
         @endforeach
     </div>
