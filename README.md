@@ -57,7 +57,11 @@ In order to run the project, the following installations are needed:
    ```sh
    php artisan key:generate
    ```
-6. Edit `.env` file with the Database settings, example:
+6. Edit `.env` file with the Database settings
+   ```sh
+   notepad.exe .env
+   ```
+   example `.env` settings with default values
    ```sh
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
