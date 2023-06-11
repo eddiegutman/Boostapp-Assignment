@@ -20,7 +20,7 @@ A simple E-commerce Cart
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+In order to run the project, the following installations are needed:
 * PHP
   ```
   https://www.php.net/downloads
@@ -61,7 +61,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
-   DB_PORT=`3306`
+   DB_PORT=3306
    DB_DATABASE=shop
    DB_USERNAME=root
    DB_PASSWORD=
